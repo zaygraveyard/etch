@@ -11,7 +11,7 @@
     "clean": "rimraf dist/",
     "build": "npm-run-all --silent clean transpile strip optimize minify size",
     "transpile": "rollup -c config/rollup.config.js",
-    "optimize": "uglifyjs dist/etch.dev.js -c conditionals=false,sequences=false,loops=false,join_vars=false,collapse_vars=false --pure-funcs=Object.defineProperty -b width=120,quote_style=3 -o dist/etch.js --source-map \"content='dist/etch.dev.js.map',url='etch.js.map'\"",
+    "optimize": "uglifyjs dist/etch.dev.js -c conditionals=false,sequences=false,loops=false,join_vars=false,collapse_vars=false --pure-funcs=Object.defineProperty --mangle-props regex=/^_/ --name-cache config/properties.json -b width=120,quote_style=3 -o dist/etch.js --source-map \"content='dist/etch.dev.js.map',url='etch.js.map'\"",
     "minify": "uglifyjs dist/etch.js -c collapse_vars,evaluate,unsafe,loops=false,keep_fargs=false,pure_getters,unused,dead_code -m -o dist/etch.min.js --source-map \"content='dist/etch.js.map',url='etch.min.js.map'\"",
     "strip:main": "jscodeshift --run-in-band -s -t config/codemod-strip-tdz.js dist/etch.dev.js",
     "strip:esm": "jscodeshift --run-in-band -s -t config/codemod-strip-tdz.js dist/etch.esm.js",
