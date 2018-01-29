@@ -22,7 +22,7 @@
     "tdd": "npm run standard && node_modules/.bin/electron-mocha --renderer --interactive --recursive ./test/helpers/register-babel  test",
     "standard": "node_modules/.bin/standard --recursive lib test && echo Linting passed",
     "prepublish": "npm-run-all standard build",
-    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag v$npm_package_version && git push && git push --tags && npm publish"
+    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag v$npm_package_version && git push && git push --tags && npm publish --access=public"
   },
   "repository": {
     "type": "git",
