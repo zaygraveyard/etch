@@ -1,3 +1,4 @@
-require('babel/register')({
-  optional: ['es7.asyncFunctions']
+require("regenerator-runtime/runtime")
+require('babel-register')({
+  plugins: ["transform-async-to-generator"]
 })

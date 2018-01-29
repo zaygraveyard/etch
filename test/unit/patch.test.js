@@ -1,11 +1,11 @@
 /** @jsx dom */
 
-const {assert} = require('chai')
-const Random = require('random-seed')
+import {assert} from 'chai'
+import Random from 'random-seed'
 
-const dom = require('../../lib/dom')
-const render = require('../../lib/render')
-const patch = require('../../lib/patch')
+import dom from '../../lib/dom'
+import render from '../../lib/render'
+import patch from '../../lib/patch'
 
 describe('patch (oldVirtualNode, newVirtualNode)', () => {
   describe('properties', function () {
