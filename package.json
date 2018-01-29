@@ -1,5 +1,5 @@
 {
-  "name": "etch",
+  "name": "@zaygraveyard/etch",
   "version": "0.12.8",
   "description": "Perform virtual DOM updates based on changes to a data model.",
   "main": "lib/index.js",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/etch.git"
+    "url": "https://github.com/zaygraveyard/etch.git"
   },
   "keywords": [
     "virtual-dom dom view element custom-elements dom-diff atom electron"
@@ -34,9 +34,9 @@
   "author": "Nathan Sobo <nathan@github.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/atom/etch/issues"
+    "url": "https://github.com/zaygraveyard/etch/issues"
   },
-  "homepage": "https://github.com/atom/etch",
+  "homepage": "https://github.com/zaygraveyard/etch",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
